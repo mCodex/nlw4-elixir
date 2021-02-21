@@ -1,13 +1,16 @@
-FROM elixir:alpine
+# FROM elixir:alpine
 
-ENV APP_HOME /app
+# WORKDIR /app
 
-RUN mkdir $APP_HOME
+# RUN apk add --update nodejs npm inotify-tools
 
-WORKDIR $APP_HOME
+# COPY mix.exs .
+# COPY mix.lock .
 
-RUN mix local.hex --force && \
-    mix archive.install hex phx_new 1.5.7 --force && \
-    mix local.rebar --force
+# RUN mix local.hex --force && \
+#     mix archive.install hex phx_new 1.5.7 --force && \
+#     mix local.rebar --force
 
-ENTRYPOINT [ "mix", "phx.server" ]
+# RUN mix deps.get
+
+# ENTRYPOINT [ "mix", "phx.server" ]

@@ -5,7 +5,7 @@ config :nlw4, Nlw4.Repo,
   username: "postgres",
   password: "postgres",
   database: "nlw4_dev",
-  hostname: "db",
+  hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 

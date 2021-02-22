@@ -1,6 +1,6 @@
 # Rocketseat's NLW 4
 
-A MVC project using [Phoenix Framework](https://www.phoenixframework.org/) and Docker and Docker Compose
+An API built using [Phoenix Framework](https://www.phoenixframework.org/) and Docker and Docker Compose
 
 --- 
 
@@ -8,13 +8,13 @@ A MVC project using [Phoenix Framework](https://www.phoenixframework.org/) and D
 
 ### NOTE: The Elixir's development docker doesn't work yet
 
-First of all, you need to download Phoenix's npm dependencies:
+First of all, you need to download Phoenix's dependencies:
 
 ```bash
-cd assets && npm install && cd ..
+mix deps.get
 ```
 
-Make sure you have Docker installed and running on your system and then:
+Make sure you have Docker installed and running on your system and run the below code to initialize Postgres:
 
 ```bash
 docker-compose up -d
@@ -23,7 +23,7 @@ docker-compose up -d
 After that, you need to create the default database:
 
 ```bash
-docker exec nlw4-elixir_app_1 mix ecto.create
+mix ecto.setup
 ```
 
 ---
@@ -32,4 +32,12 @@ docker exec nlw4-elixir_app_1 mix ecto.create
 
 Open your browser at:
 
-http://localhost:4000
+http://localhost:4000/api/numbers
+
+---
+
+## Testing
+
+```bash
+mix test
+```

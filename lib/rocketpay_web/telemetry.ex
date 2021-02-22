@@ -1,4 +1,4 @@
-defmodule Nlw4Web.Telemetry do
+defmodule RocketpayWeb.Telemetry do
   use Supervisor
   import Telemetry.Metrics
 
@@ -31,11 +31,11 @@ defmodule Nlw4Web.Telemetry do
       ),
 
       # Database Metrics
-      summary("nlw4.repo.query.total_time", unit: {:native, :millisecond}),
-      summary("nlw4.repo.query.decode_time", unit: {:native, :millisecond}),
-      summary("nlw4.repo.query.query_time", unit: {:native, :millisecond}),
-      summary("nlw4.repo.query.queue_time", unit: {:native, :millisecond}),
-      summary("nlw4.repo.query.idle_time", unit: {:native, :millisecond}),
+      summary("rocketpay.repo.query.total_time", unit: {:native, :millisecond}),
+      summary("rocketpay.repo.query.decode_time", unit: {:native, :millisecond}),
+      summary("rocketpay.repo.query.query_time", unit: {:native, :millisecond}),
+      summary("rocketpay.repo.query.queue_time", unit: {:native, :millisecond}),
+      summary("rocketpay.repo.query.idle_time", unit: {:native, :millisecond}),
 
       # VM Metrics
       summary("vm.memory.total", unit: {:byte, :kilobyte}),
@@ -49,7 +49,7 @@ defmodule Nlw4Web.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {Nlw4Web, :count_users, []}
+      # {RocketpayWeb, :count_users, []}
     ]
   end
 end

@@ -7,16 +7,16 @@
 # General application configuration
 use Mix.Config
 
-config :nlw4,
-  ecto_repos: [Nlw4.Repo]
+config :rocketpay,
+  ecto_repos: [Rocketpay.Repo]
 
 # Configures the endpoint
-config :nlw4, Nlw4Web.Endpoint,
+config :rocketpay, RocketpayWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "1hkius+iGY6oxZiBsOD6b4UNMff8Z1Qob+Z4rteofcKJvTyZeZ8GwNZ/eFXScBSn",
-  render_errors: [view: Nlw4Web.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: Nlw4.PubSub,
-  live_view: [signing_salt: "JsnMe+lK"]
+  secret_key_base: "Q1mpX5WIREk1u7A7gEpkhFjyv9Wa0Ibg24Iw2yMcGteFZCOCQXeTjUFEO3zwRZH4",
+  render_errors: [view: RocketpayWeb.ErrorView, accepts: ~w(json), layout: false],
+  pubsub_server: Rocketpay.PubSub,
+  live_view: [signing_salt: "liL85JAA"]
 
 # Configures Elixir's Logger
 config :logger, :console,

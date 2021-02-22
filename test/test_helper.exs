@@ -1,2 +1,2 @@
 ExUnit.start()
-Ecto.Adapters.SQL.Sandbox.mode(Nlw4.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(Rocketpay.Repo, :manual)

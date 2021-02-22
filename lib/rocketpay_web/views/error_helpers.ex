@@ -1,21 +1,7 @@
-defmodule Nlw4Web.ErrorHelpers do
+defmodule RocketpayWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
-
-  use Phoenix.HTML
-
-  @doc """
-  Generates tag for inlined form input errors.
-  """
-  def error_tag(form, field) do
-    Enum.map(Keyword.get_values(form.errors, field), fn error ->
-      content_tag(:span, translate_error(error),
-        class: "invalid-feedback",
-        phx_feedback_for: input_id(form, field)
-      )
-    end)
-  end
 
   @doc """
   Translates an error message using gettext.
@@ -39,9 +25,9 @@ defmodule Nlw4Web.ErrorHelpers do
     # should be written to the errors.po file. The :count option is
     # set by Ecto and indicates we should also apply plural rules.
     if count = opts[:count] do
-      Gettext.dngettext(Nlw4Web.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(RocketpayWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(Nlw4Web.Gettext, "errors", msg, opts)
+      Gettext.dgettext(RocketpayWeb.Gettext, "errors", msg, opts)
     end
   end
 end

@@ -5,7 +5,7 @@
 # Inside the script, you can read and write to any of your
 # repositories directly:
 #
-#     Nlw4.Repo.insert!(%Nlw4.SomeSchema{})
+#     Rocketpay.Repo.insert!(%Rocketpay.SomeSchema{})
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.

@@ -1,6 +1,6 @@
-defmodule Nlw4 do
+defmodule Rocketpay do
   @moduledoc """
-  Nlw4 keeps the contexts that define your domain
+  Rocketpay keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

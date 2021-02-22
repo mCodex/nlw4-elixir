@@ -1,12 +1,12 @@
-defmodule Nlw4Web do
+defmodule RocketpayWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use Nlw4Web, :controller
-      use Nlw4Web, :view
+      use RocketpayWeb, :controller
+      use RocketpayWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,19 +19,19 @@ defmodule Nlw4Web do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: Nlw4Web
+      use Phoenix.Controller, namespace: RocketpayWeb
 
       import Plug.Conn
-      import Nlw4Web.Gettext
-      alias Nlw4Web.Router.Helpers, as: Routes
+      import RocketpayWeb.Gettext
+      alias RocketpayWeb.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/nlw4_web/templates",
-        namespace: Nlw4Web
+        root: "lib/rocketpay_web/templates",
+        namespace: RocketpayWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -54,21 +54,18 @@ defmodule Nlw4Web do
   def channel do
     quote do
       use Phoenix.Channel
-      import Nlw4Web.Gettext
+      import RocketpayWeb.Gettext
     end
   end
 
   defp view_helpers do
     quote do
-      # Use all HTML functionality (forms, tags, etc)
-      use Phoenix.HTML
-
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import Nlw4Web.ErrorHelpers
-      import Nlw4Web.Gettext
-      alias Nlw4Web.Router.Helpers, as: Routes
+      import RocketpayWeb.ErrorHelpers
+      import RocketpayWeb.Gettext
+      alias RocketpayWeb.Router.Helpers, as: Routes
     end
   end
 

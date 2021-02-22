@@ -1,28 +1,13 @@
-defmodule Nlw4Web.Router do
-  use Nlw4Web, :router
-
-  pipeline :browser do
-    plug :accepts, ["html"]
-    plug :fetch_session
-    plug :fetch_flash
-    plug :protect_from_forgery
-    plug :put_secure_browser_headers
-  end
+defmodule RocketpayWeb.Router do
+  use RocketpayWeb, :router
 
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/", Nlw4Web do
-    pipe_through :browser
-
-    get "/", PageController, :index
+  scope "/api", RocketpayWeb do
+    pipe_through :api
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", Nlw4Web do
-  #   pipe_through :api
-  # end
 
   # Enables LiveDashboard only for development
   #
@@ -35,8 +20,8 @@ defmodule Nlw4Web.Router do
     import Phoenix.LiveDashboard.Router
 
     scope "/" do
-      pipe_through :browser
-      live_dashboard "/dashboard", metrics: Nlw4Web.Telemetry
+      pipe_through [:fetch_session, :protect_from_forgery]
+      live_dashboard "/dashboard", metrics: RocketpayWeb.Telemetry
     end
   end
 end

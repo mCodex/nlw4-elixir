@@ -1,4 +1,4 @@
-defmodule Nlw4Web.ConnCase do
+defmodule RocketpayWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -11,7 +11,7 @@ defmodule Nlw4Web.ConnCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use Nlw4Web.ConnCase, async: true`, although
+  by setting `use RocketpayWeb.ConnCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -22,20 +22,20 @@ defmodule Nlw4Web.ConnCase do
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import Nlw4Web.ConnCase
+      import RocketpayWeb.ConnCase
 
-      alias Nlw4Web.Router.Helpers, as: Routes
+      alias RocketpayWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint Nlw4Web.Endpoint
+      @endpoint RocketpayWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Nlw4.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Rocketpay.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Nlw4.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Rocketpay.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

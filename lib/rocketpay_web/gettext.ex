@@ -1,11 +1,11 @@
-defmodule Nlw4Web.Gettext do
+defmodule RocketpayWeb.Gettext do
   @moduledoc """
   A module providing Internationalization with a gettext-based API.
 
   By using [Gettext](https://hexdocs.pm/gettext),
   your module gains a set of macros for translations, for example:
 
-      import Nlw4Web.Gettext
+      import RocketpayWeb.Gettext
 
       # Simple translation
       gettext("Here is the string to translate")
@@ -20,5 +20,5 @@ defmodule Nlw4Web.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :nlw4
+  use Gettext, otp_app: :rocketpay
 end

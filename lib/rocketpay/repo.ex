@@ -1,5 +1,5 @@
-defmodule Nlw4.Repo do
+defmodule Rocketpay.Repo do
   use Ecto.Repo,
-    otp_app: :nlw4,
+    otp_app: :rocketpay,
     adapter: Ecto.Adapters.Postgres
 end

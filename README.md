@@ -1,6 +1,12 @@
-# Rocketseat's NLW 4
+# Rocketpay from Rocketseat's NLW 4
 
-An API built using [Phoenix Framework](https://www.phoenixframework.org/) and Docker and Docker Compose
+An API built using [Phoenix Framework](https://www.phoenixframework.org/)
+
+---
+
+## About the project
+
+The project is a bank account API where users can register and deposit or withdraw money from their account.
 
 --- 
 

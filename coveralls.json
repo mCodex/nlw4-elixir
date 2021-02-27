@@ -1,0 +1,5 @@
+{
+    "skip_files": [
+      "lib/rocketpay_web/channels/user_socket.ex"
+    ]
+  }
